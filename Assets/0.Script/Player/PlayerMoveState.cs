@@ -1,16 +1,24 @@
 using UnityEngine;
 
-public class PlayerMoveState : MonoBehaviour
+public class PlayerMoveState : IState
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private PlayerController controller;
+    public PlayerMoveState(PlayerController controller)
     {
-        
+        this.controller = controller;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Enter()
     {
-        
+        controller.Walk();
+    }
+    public void Exit() { }
+    public void Tick()
+    {
+        if (!controller.HasMove)
+        {
+            controller.Idle();
+            return;
+        }
+        controller.Move();
     }
 }

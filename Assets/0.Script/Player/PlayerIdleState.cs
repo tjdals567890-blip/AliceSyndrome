@@ -1,16 +1,24 @@
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 
-public class PlayerIdleState : MonoBehaviour
+public class PlayerIdleState : IState
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private PlayerController controller;
+    public PlayerIdleState(PlayerController controller)
     {
-        
+        this.controller = controller;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Enter()
     {
         
+        controller.Stop();
+    }
+    public void Tick()
+    {
+        if (controller.HasMove)
+            controller.Move();
+    }
+    public void Exit()
+    {
     }
 }
