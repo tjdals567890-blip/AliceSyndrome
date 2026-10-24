@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -6,10 +7,16 @@ public class Player : MonoBehaviour
     private float moveSpeed = 5f;
     private Vector2 lastDir = Vector2.down;
     private Vector2 boxSize = new Vector2(0.7f, 0.7f);
+
+    [Header("레이어 설정")]
     public LayerMask wallLayer;
+    public LayerMask interactionTargetLayer;
 
     [Header("테스트용 임시 변수")]
     public bool hasWood = false;
+
+    [Header("인벤 / 열쇠 시스템")] // 추후 인벤토리로 이관
+    private List<string> acquiredKeys = new List<string>();
 
     private void Update()
     {
@@ -44,7 +51,7 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Z))
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, lastDir, interactDistance);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, lastDir, interactDistance, interactionTargetLayer);
 
             if (hit.collider != null)
             {
@@ -59,10 +66,30 @@ public class Player : MonoBehaviour
                     Debug.Log("상호작용 불가");
                 }
             }
-            else
-            {
-                Debug.Log("찾지 못함");
-            }
+        }
+    }
+
+    // --------------- inventory -------------
+    
+    public void AcquireKey(string keyID)
+    {
+        if (!acquiredKeys.Contains(keyID))
+        {
+            acquiredKeys.Add(keyID);
+            Debug.Log($"열쇠 {keyID}");
+        }
+    }
+
+    public bool HasKey(string keyID)
+    {
+        return acquiredKeys.Contains(keyID);
+    }
+
+    public void Consumekey(string keyID)
+    {
+        if(acquiredKeys.Contains(keyID))
+        {
+            acquiredKeys.Remove(keyID);
         }
     }
 }
