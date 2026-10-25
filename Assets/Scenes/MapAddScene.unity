@@ -594,10 +594,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 707338165810486981, guid: 1871aa1b6b940f84492dd7dbc25804a8, type: 3}
-      propertyPath: m_Name
-      value: 1F_Grid
-      objectReference: {fileID: 0}
     - target: {fileID: 1416783172306938144, guid: 1871aa1b6b940f84492dd7dbc25804a8, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -605,14 +601,6 @@ PrefabInstance:
     - target: {fileID: 3218069224751754761, guid: 1871aa1b6b940f84492dd7dbc25804a8, type: 3}
       propertyPath: m_Name
       value: 1F_MountainVilla_Prefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580563035043845640, guid: 1871aa1b6b940f84492dd7dbc25804a8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -29.591644
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580563035043845640, guid: 1871aa1b6b940f84492dd7dbc25804a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.7234383
       objectReference: {fileID: 0}
     - target: {fileID: 4059775247880012296, guid: 1871aa1b6b940f84492dd7dbc25804a8, type: 3}
       propertyPath: Target.TrackingTarget
@@ -657,34 +645,6 @@ PrefabInstance:
     - target: {fileID: 4800035248128981850, guid: 1871aa1b6b940f84492dd7dbc25804a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095363268755435586, guid: 1871aa1b6b940f84492dd7dbc25804a8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095363268755435586, guid: 1871aa1b6b940f84492dd7dbc25804a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095363268755435586, guid: 1871aa1b6b940f84492dd7dbc25804a8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095363268755435586, guid: 1871aa1b6b940f84492dd7dbc25804a8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095363268755435586, guid: 1871aa1b6b940f84492dd7dbc25804a8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7048544462513803463, guid: 1871aa1b6b940f84492dd7dbc25804a8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.40835655
-      objectReference: {fileID: 0}
-    - target: {fileID: 7048544462513803463, guid: 1871aa1b6b940f84492dd7dbc25804a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.7234383
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -748,6 +708,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1dd3ec402f238b4eaf7ccae59d2910b, type: 3}
+--- !u!4 &1692938740 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6900255621178522902, guid: 1871aa1b6b940f84492dd7dbc25804a8, type: 3}
+  m_PrefabInstance: {fileID: 1407059405}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1798070567 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5425643405281287895, guid: 6e52ce245d8ee97409e246c6a57c95cd, type: 3}
+  m_PrefabInstance: {fileID: 1853293653117089439}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
 --- !u!1 &1956286626
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,6 +756,7 @@ MonoBehaviour:
   roomCameras:
   - {fileID: 98383029}
   - {fileID: 886712646}
+  - {fileID: 1798070567}
 --- !u!4 &1956286628
 Transform:
   m_ObjectHideFlags: 0
@@ -843,10 +820,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5425643405281287895, guid: 6e52ce245d8ee97409e246c6a57c95cd, type: 3}
+      propertyPath: Target.TrackingTarget
+      value: 
+      objectReference: {fileID: 1204654837}
     - target: {fileID: 8313673469353522181, guid: 6e52ce245d8ee97409e246c6a57c95cd, type: 3}
       propertyPath: m_Name
       value: 2F_Playroom_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 8781839491152451507, guid: 6e52ce245d8ee97409e246c6a57c95cd, type: 3}
+      propertyPath: targetSpawnPoint
+      value: 
+      objectReference: {fileID: 1692938740}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
