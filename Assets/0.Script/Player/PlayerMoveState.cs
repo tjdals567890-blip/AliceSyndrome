@@ -19,6 +19,6 @@ public class PlayerMoveState : IState
             controller.Idle();
             return;
         }
-        controller.Move();
+        controller.Walk();
     }
 }
