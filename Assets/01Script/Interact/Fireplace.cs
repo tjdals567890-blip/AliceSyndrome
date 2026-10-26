@@ -4,6 +4,8 @@ public class Fireplace : MonoBehaviour, IInteractable
 {
     private bool isFireLit = false;
 
+    [SerializeField] ItemData Firewood;
+
     public void Interact()
     {
         if(isFireLit)
@@ -14,17 +16,17 @@ public class Fireplace : MonoBehaviour, IInteractable
 
         Player player = FindAnyObjectByType<Player>();
 
-        if(player != null && player.hasWood)
+        if(Firewood != null && InventoryManager.Instance.HasItem(Firewood))
         {
             isFireLit = true;
-            player.hasWood = false;
-            Debug.Log("장작을 사용하여 난로에 불을 붙였습니다!");
+            InventoryManager.Instance?.RemoveItem(Firewood);
+            Debug.Log("불이 붙었다");
 
             // Todo : 난로 타는 이미지로 변경
         }
         else
         {
-            Debug.Log("장작이 없습니다.");
+            Debug.Log("불을 붙일 무언가가 필요해보인다.");
             // Todo : 장작이 필요하다는 UI 띄우기
         }
     }

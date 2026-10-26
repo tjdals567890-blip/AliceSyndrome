@@ -27,7 +27,7 @@ public class InventoryManager : MonoBehaviour
             return;
 
         items.Add(item);
-        //OnInventoryChanged?.Invoke();
+        OnInventoryChanged?.Invoke(item);
     }
     public void RemoveItem(ItemData item)
     {
@@ -36,7 +36,7 @@ public class InventoryManager : MonoBehaviour
         if (!items.Remove(item))
             return;
 
-        //OnInventoryChanged?.Invoke();
+        OnInventoryChanged?.Invoke(item);
     }
 
     public bool HasItem(string itemId)

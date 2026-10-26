@@ -9,10 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 097f2dc5deb23b44b89302994280f6a8, type: 3}
-  m_Name: New Item
+  m_Script: {fileID: 11500000, guid: 5a01de459b98efd4b8da821cfb829b0f, type: 3}
+  m_Name: Firewood
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemId: 
-  itemName: 
-  text: 
-  icon: {fileID: 0}
+  itemId: 0
+  itemName: "\uC7A5\uC791"
+  itemIcon: {fileID: 0}
+  itemType: 0
+  itemDescription: "\uBD88\uC744 \uBD99\uC77C\uC218 \uC788\uC744\uAC83 \uAC19\uC740
+    \uC7A5\uC791\uC774\uB2E4."
